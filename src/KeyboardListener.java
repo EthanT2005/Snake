@@ -5,11 +5,7 @@ import java.awt.event.KeyEvent;
  	
  		public void keyPressed(KeyEvent e){
  		    switch(e.getKeyCode()){
-		    	case 39:	// -> Right 
-		    				//if it's not the opposite direction
-		    				if(ThreadsController.directionSnake!=2) 
-		    					ThreadsController.directionSnake=1;
-		    			  	break;
+		    	
 		    	case 38:	// -> Top
 							if(ThreadsController.directionSnake!=4) 
 								ThreadsController.directionSnake=3;
@@ -20,12 +16,19 @@ import java.awt.event.KeyEvent;
 								ThreadsController.directionSnake=2;
 		    				break;
 		    				
-		    	case 40:	// -> Bottom
-							if(ThreadsController.directionSnake!=3)
-								ThreadsController.directionSnake=4;
-		    				break;
+		    	case 39:	// -> Right 
+		    				//if it's not the opposite direction
+		    				if(ThreadsController.directionSnake!=2) 
+		    					ThreadsController.directionSnake=1;
+		    			  	break;
+			    
+			case 40:	// -> Bottom
+						if(ThreadsController.directionSnake!=3)
+							ThreadsController.directionSnake=4;
+		    			break;
 		    	
-		    	default: 	break;
+		    	default: 	
+				break;
  		    }
  		}
  	
